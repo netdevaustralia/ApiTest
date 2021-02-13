@@ -1,7 +1,7 @@
 # Shopping Cart .NET5 WebApi
 Sample .NET5 standard reference application, demonstrating CQRS application architecture. If you're new to CQRS, read the [CQRS in Microservices](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/cqrs-microservice-reads) guide.
 
-Along with the CQRS pattern, the MediatR pattern is implemented to setup the custom project pipeline and prevent dependencies injection in controller layer. Please read about the MediatR pattern for more information[CQRS with MediatR] (https://medium.com/@ducmeit/net-core-using-cqrs-pattern-with-mediatr-part-1-55557e90931b)
+Along with the CQRS pattern, the MediatR pattern is implemented to setup the custom project pipeline and prevent dependencies injection in controller layer. Please read about the MediatR pattern for more information [CQRS with MediatR](https://medium.com/@ducmeit/net-core-using-cqrs-pattern-with-mediatr-part-1-55557e90931b)
 
 ## Project Structure
 
