@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "ApiTest": {
+    "ShoppingCart": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
