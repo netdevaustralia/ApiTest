@@ -1,7 +1,7 @@
-﻿namespace Application.Business
+﻿namespace Application.Business.RecommendedProductLogic
 {
-    using Application.Common.Models;
     using System.Collections.Generic;
+    using Common.Models;
 
     public interface IRecommendedProductLogic
     {

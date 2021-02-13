@@ -6,7 +6,8 @@
     [Serializable]
     public class ProductServiceException : Exception
     {
-        public ProductServiceException(SerializationInfo info, StreamingContext context) : base(info, context)
+        public ProductServiceException(SerializationInfo info, StreamingContext context) : base(
+            info, context)
         {
         }
 

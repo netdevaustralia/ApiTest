@@ -1,14 +1,15 @@
-namespace ApiTest
+namespace ShoppingCart.Api
 {
-    using Application.Core;
-    using Application.Core.Config;
+    using System.Text.Json.Serialization;
+    using Application;
+    using Application.Config;
+    using Infrastructure;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.OpenApi.Models;
-    using System.Text.Json.Serialization;
 
     public class Startup
     {
@@ -24,16 +25,18 @@ namespace ApiTest
         {
             services.AddApplication();
             services.AddInfrastructure(Configuration);
-            services.Configure<ProductServiceConfig>(Configuration.GetSection("WooliesXServiceConfig"));
+            services.Configure<ProductServiceConfig>(
+                Configuration.GetSection("WooliesXServiceConfig"));
 
             services.AddControllers()
-            .AddJsonOptions(options =>
-        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+                .AddJsonOptions(options =>
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ShoppingCart", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "ShoppingCart", Version = "v1"});
             });
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -42,7 +45,8 @@ namespace ApiTest
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShoppingCart v1"));
+                app.UseSwaggerUI(c =>
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShoppingCart v1"));
             }
 
             app.UseHttpsRedirection();

@@ -1,26 +1,30 @@
-﻿namespace Application.Behaviours
+﻿namespace Application.Common.Behaviours
 {
-    using FluentValidation;
-    using MediatR;
-    using Microsoft.Extensions.Logging;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
+    using FluentValidation;
+    using MediatR;
+    using Microsoft.Extensions.Logging;
 
-    public class RequestValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+    public class
+        RequestValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>
     {
-        private readonly IEnumerable<IValidator<TRequest>> _validators;
         private readonly ILogger _logger;
+        private readonly IEnumerable<IValidator<TRequest>> _validators;
 
-        public RequestValidationBehavior(IEnumerable<IValidator<TRequest>> validators, ILogger<TRequest> logger)
+
+        public RequestValidationBehavior(IEnumerable<IValidator<TRequest>> validators, ILogger logger)
         {
             _validators = validators;
             _logger = logger;
         }
 
-        public Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+
+        public Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken,
+            RequestHandlerDelegate<TResponse> next)
         {
             var context = new ValidationContext<TRequest>(request);
 
@@ -35,7 +39,9 @@
                 return next();
             }
 
-            _logger.LogInformation($"ApiTest validation exceptions {failures.Aggregate("", (current, nxt) => current + " " + nxt)}", typeof(TRequest).Name);
+            _logger.LogInformation(
+                $"ApiTest validation exceptions {failures.Aggregate("", (current, nxt) => current + " " + nxt)}",
+                typeof(TRequest).Name);
             throw new ValidationException(failures);
         }
     }

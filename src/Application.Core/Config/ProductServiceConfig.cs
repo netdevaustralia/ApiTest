@@ -1,4 +1,4 @@
-﻿namespace Application.Core.Config
+﻿namespace Application.Config
 {
     public class ProductServiceConfig
     {

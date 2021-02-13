@@ -1,8 +1,8 @@
-﻿namespace Application.Services
+﻿namespace Application.Common.Interfaces
 {
-    using Application.Common.Models;
     using System.Collections.Generic;
     using System.Threading.Tasks;
+    using Models;
 
     public interface IProductService
     {

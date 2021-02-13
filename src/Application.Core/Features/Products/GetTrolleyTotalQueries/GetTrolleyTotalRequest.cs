@@ -1,8 +1,8 @@
 ﻿namespace Application.Features.Products.GetTrolleyTotalQueries
 {
-    using Application.Common.Models;
-    using MediatR;
     using System.Collections.Generic;
+    using Common.Models;
+    using MediatR;
 
     public class GetTrolleyTotalRequest : IRequest<GetTrolleyTotalResponse>
     {

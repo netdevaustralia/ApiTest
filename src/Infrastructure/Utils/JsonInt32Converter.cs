@@ -1,4 +1,4 @@
-﻿namespace Application.Core.Utils
+﻿namespace Infrastructure.Utils
 {
     using System;
     using System.Text.Json;
@@ -6,23 +6,28 @@
 
     public class JsonInt32Converter : JsonConverter<int>
     {
-        public override int Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override int Read(ref Utf8JsonReader reader, Type typeToConvert,
+            JsonSerializerOptions options)
         {
-            if (reader.TokenType == JsonTokenType.String)
+            switch (reader.TokenType)
             {
-                var stringValue = reader.GetString();
-                if (int.TryParse(stringValue, out var value))
+                case JsonTokenType.String:
                 {
-                    return value;
+                    var stringValue = reader.GetString();
+                    if (int.TryParse(stringValue, out var value))
+                    {
+                        return value;
+                    }
+
+                    break;
                 }
-            }
-            else if (reader.TokenType == JsonTokenType.Number)
-            {
-                return reader.GetInt32();
+                case JsonTokenType.Number:
+                    return reader.GetInt32();
             }
 
             throw new JsonException();
         }
+
 
         public override void Write(Utf8JsonWriter writer, int value, JsonSerializerOptions options)
         {

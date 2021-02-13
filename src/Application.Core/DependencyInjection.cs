@@ -1,11 +1,12 @@
-﻿namespace Application.Core
+﻿namespace Application
 {
-    using Application.Behaviours;
-    using Application.Business;
-    using Application.Business.TrolleyAmountCalculator;
+    using System.Reflection;
+    using Business.RecommendedProductLogic;
+    using Business.SortingProductsLogic;
+    using Business.TrolleyAmountCalculator;
+    using Common.Behaviours;
     using MediatR;
     using Microsoft.Extensions.DependencyInjection;
-    using System.Reflection;
 
     public static class DependencyInjection
     {
@@ -18,11 +19,13 @@
             return services;
         }
 
+
         private static void AddMediatRWithPipeline(this IServiceCollection services)
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>),
+                typeof(RequestValidationBehavior<,>));
         }
     }
 }

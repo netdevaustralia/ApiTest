@@ -1,10 +1,11 @@
 ﻿namespace Application.Business.TrolleyAmountCalculator
 {
-    using Application.Common.Models;
     using System.Collections.Generic;
+    using Common.Models;
 
     public interface ITrolleyAmountCalculator
     {
-        decimal CalculateLowestPrice(List<Product> products, List<Special> specials, List<ProductQuantity> productQuantities);
+        decimal CalculateLowestPrice(List<Product> products, List<Special> specials,
+            List<ProductQuantity> productQuantities);
     }
 }

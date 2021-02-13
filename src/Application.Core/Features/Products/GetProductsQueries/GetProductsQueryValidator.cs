@@ -1,4 +1,4 @@
-﻿namespace Application.Features.Products.Queries
+﻿namespace Application.Features.Products.GetProductsQueries
 {
     using FluentValidation;
 

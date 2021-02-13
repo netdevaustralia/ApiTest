@@ -1,4 +1,4 @@
-﻿namespace Application.Core.Models
+﻿namespace Application.Features.Products.GetUserDetailsQueries
 {
     public class GetUserDetailsResponse
     {

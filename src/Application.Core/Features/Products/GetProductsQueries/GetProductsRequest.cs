@@ -1,6 +1,6 @@
-﻿namespace Application.Features.Products.Queries
+﻿namespace Application.Features.Products.GetProductsQueries
 {
-    using Application.Common.Enums;
+    using Common.Enums;
     using MediatR;
 
     public class GetProductsRequest : IRequest<GetProductsResponse>

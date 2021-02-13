@@ -1,8 +1,8 @@
-﻿namespace Application.Business
+﻿namespace Application.Business.SortingProductsLogic
 {
-    using Application.Common.Enums;
-    using Application.Common.Models;
     using System.Collections.Generic;
+    using Common.Enums;
+    using Common.Models;
 
     public interface ISortingProductLogic
     {

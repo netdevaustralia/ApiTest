@@ -1,4 +1,4 @@
-﻿namespace ApiTest.Controllers
+﻿namespace ShoppingCart.Api.Controllers
 {
     using MediatR;
     using Microsoft.AspNetCore.Mvc;
@@ -9,6 +9,7 @@
     {
         private IMediator _mediator;
 
-        protected IMediator Mediator => _mediator ??= (IMediator)HttpContext.RequestServices.GetService(typeof(IMediator));
+        protected IMediator Mediator => _mediator ??=
+            (IMediator)HttpContext.RequestServices.GetService(typeof(IMediator));
     }
 }

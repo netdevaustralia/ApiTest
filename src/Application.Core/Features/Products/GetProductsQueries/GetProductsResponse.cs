@@ -1,7 +1,7 @@
-﻿namespace Application.Features.Products.Queries
+﻿namespace Application.Features.Products.GetProductsQueries
 {
-    using Application.Common.Models;
     using System.Collections.Generic;
+    using Common.Models;
 
     public class GetProductsResponse
     {
