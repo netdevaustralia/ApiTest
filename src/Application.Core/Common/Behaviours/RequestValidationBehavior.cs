@@ -31,7 +31,9 @@
                 .ToList();
 
             if (failures.Count == 0)
+            {
                 return next();
+            }
 
             _logger.LogInformation($"ApiTest validation exceptions {failures.Aggregate("", (current, nxt) => current + " " + nxt)}", typeof(TRequest).Name);
             throw new ValidationException(failures);

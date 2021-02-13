@@ -36,7 +36,7 @@
             var sortedProducts = sortingProductLogic.GetSortedProductList(Common.Enums.SortOption.Low, productList);
 
             // Assert
-            sortedProducts.Should().BeInAscendingOrder(x=>x.Price);
+            sortedProducts.Should().BeInAscendingOrder(x => x.Price);
         }
 
         [Fact]
@@ -97,6 +97,7 @@
             // Assert
             sortedProducts.Should().BeInAscendingOrder(x => x.Name);
         }
+
         [Fact]
         public void GetSortedProductList_ByDescendingOrder_ReturnsProductsInDescendingOrderOfName()
         {

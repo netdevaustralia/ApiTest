@@ -53,7 +53,7 @@
                       }
             };
 
-            var expectedResult = new Product{ Name = "ProductA", Quantity = 51, Price = 0 };
+            var expectedResult = new Product { Name = "ProductA", Quantity = 51, Price = 0 };
 
             // Act
             var result = recommendedProductLogic.SortRecommendedProducts(shopperHistories);

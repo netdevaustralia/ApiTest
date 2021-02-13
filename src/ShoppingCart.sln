@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiTest", "ApiTest\ApiTest.csproj", "{840F0E75-AAB9-41D8-871F-C7404CDCFA4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCart.Api", "ApiTest\ShoppingCart.Api.csproj", "{840F0E75-AAB9-41D8-871F-C7404CDCFA4F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application.Core\Application.csproj", "{56A8FD71-137D-430B-9642-4DC0EE99FA54}"
 EndProject
@@ -14,7 +14,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Test", "Application.Test\Application.Test.csproj", "{4E328C3E-E50A-4721-B0A9-D1A8B36DF86E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Tests", "Application.Test\Application.Tests.csproj", "{4E328C3E-E50A-4721-B0A9-D1A8B36DF86E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{81558156-2936-443F-B0DB-2F35F0D106BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{112EB33F-AEF4-4606-B7A9-D86900A6370A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9B555945-4A58-4D8C-8434-B38EC465F7AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BF1F7D94-0885-4EE7-A9AB-A47CF0914A15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +49,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{840F0E75-AAB9-41D8-871F-C7404CDCFA4F} = {81558156-2936-443F-B0DB-2F35F0D106BB}
+		{56A8FD71-137D-430B-9642-4DC0EE99FA54} = {112EB33F-AEF4-4606-B7A9-D86900A6370A}
+		{390CFDA3-D4DA-452D-8527-AF42F7453170} = {9B555945-4A58-4D8C-8434-B38EC465F7AF}
+		{4E328C3E-E50A-4721-B0A9-D1A8B36DF86E} = {BF1F7D94-0885-4EE7-A9AB-A47CF0914A15}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {16446C23-85B5-4269-BBA0-B7AA89B1FF5D}
