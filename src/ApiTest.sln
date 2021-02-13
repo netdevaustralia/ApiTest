@@ -7,6 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiTest", "ApiTest\ApiTest.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application.Core\Application.csproj", "{56A8FD71-137D-430B-9642-4DC0EE99FA54}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{390CFDA3-D4DA-452D-8527-AF42F7453170}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F914F02C-779F-4314-B39A-9042413EC956}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Test", "Application.Test\Application.Test.csproj", "{4E328C3E-E50A-4721-B0A9-D1A8B36DF86E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +30,14 @@ Global
 		{56A8FD71-137D-430B-9642-4DC0EE99FA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56A8FD71-137D-430B-9642-4DC0EE99FA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56A8FD71-137D-430B-9642-4DC0EE99FA54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{390CFDA3-D4DA-452D-8527-AF42F7453170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{390CFDA3-D4DA-452D-8527-AF42F7453170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390CFDA3-D4DA-452D-8527-AF42F7453170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{390CFDA3-D4DA-452D-8527-AF42F7453170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E328C3E-E50A-4721-B0A9-D1A8B36DF86E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E328C3E-E50A-4721-B0A9-D1A8B36DF86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E328C3E-E50A-4721-B0A9-D1A8B36DF86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E328C3E-E50A-4721-B0A9-D1A8B36DF86E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
