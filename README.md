@@ -7,6 +7,10 @@ Along with the CQRS pattern, the MediatR pattern is implemented to setup the cus
 
 All the business related logic is written in Application layer. Contract implementation is provided in the Infrastructure layer.
 
+### Architecture of the project 
+
+(../images/ShoppingCart.png)
+
 ## Test Cases
 
 Test cases are written in XUnit and FluentAssertions. Test cases are written only for the Application layer and checking the business logic but they can be extended for the Infrastructure layer as well. The current test cases are the Unit test cases only.
