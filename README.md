@@ -9,6 +9,7 @@ All the business related logic is written in Application layer. Contract impleme
 
 ### Architecture of the project 
 
+![](images/ShoppingCart.png?raw=true)
 [Architecture Diagram](../images/ShoppingCart.png)
 
 ## Test Cases
