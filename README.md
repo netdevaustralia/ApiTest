@@ -3,6 +3,10 @@ Sample .NET5 standard reference application, demonstrating CQRS application arch
 
 Along with the CQRS pattern, the MediatR pattern is implemented to setup the custom project pipeline and prevent dependencies injection in controller layer. Please read about the MediatR pattern for more information [CQRS with MediatR](https://medium.com/@ducmeit/net-core-using-cqrs-pattern-with-mediatr-part-1-55557e90931b)
 
+## Deployment
+
+Deployement is done through the Azure web service and the api can be reached here [ShoppingCartWebAPI](https://shoppingcartapi20210214172845.azurewebsites.net/index.html)
+
 ## Project Structure
 
 All the business related logic is written in Application layer. Contract implementation is provided in the Infrastructure layer.
