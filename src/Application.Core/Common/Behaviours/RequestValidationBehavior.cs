@@ -16,7 +16,7 @@
         private readonly IEnumerable<IValidator<TRequest>> _validators;
 
 
-        public RequestValidationBehavior(IEnumerable<IValidator<TRequest>> validators, ILogger logger)
+        public RequestValidationBehavior(IEnumerable<IValidator<TRequest>> validators, ILogger<TRequest> logger)
         {
             _validators = validators;
             _logger = logger;
