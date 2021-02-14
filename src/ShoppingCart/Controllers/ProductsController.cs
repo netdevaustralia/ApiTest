@@ -17,12 +17,17 @@
         public async Task<ActionResult> GetUserAsync() =>
              Ok(await Mediator.Send(new GetUserDetailsRequest()));
 
+
         [HttpGet("sort")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> GetOrderedProductListAsync(
-            [FromQuery] GetProductsRequest request) =>
-           Ok(await Mediator.Send(request));
+            [FromQuery] GetProductsRequest request)
+        {
+            var response = await Mediator.Send(request);
+            return Ok(response.Products);
+        }
+
 
         [HttpPost("trolleytotal")]
         [ProducesResponseType(StatusCodes.Status200OK)]
